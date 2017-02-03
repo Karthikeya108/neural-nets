@@ -19,10 +19,6 @@ class MSE(Objective):
         return 0.5 * sum(diff*diff)[0]
 
     def cost_derivative(self, predictions, labels):
-        #
-        # EXERCISE 2:
-        # Fix the derivative of the above MSE cost function.
-        #
         return predictions - labels
 
 
