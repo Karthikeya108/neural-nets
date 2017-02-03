@@ -8,8 +8,8 @@ class Network():
     Neural network class, designed to sequentially stack layers in a simple
     fashion.
 
-    As objective / cost function we use mean square error (MSE), which is found
-    in the utils module. All layers should be implemented in the layers module.
+    As objective / cost function mean square error (MSE) is used, which is found
+    in the utils module. All layers are implemented in the layers module.
     The model is trained by mini-batch gradientdescent.
 
     Usage:
@@ -117,19 +117,6 @@ class Network():
         '''
         Returns the number of correctly predicted labels.
         '''
-        #
-        # EXERCISE 6:
-        # For each sample in test data compute the outcome produced by the
-        # neural net by using 'single_forward'. Then determine the index of the
-        # largest element in the outcome vector to compare it to the respective
-        # label.
-        #
-        # For instance, if output_data = (0.0, 0.9, 0.1), then 0.9 is the most
-        # likely result of the network and its position in the array should
-        # match the label.
-        #
-        # Return the number of correctly predicted labels.
-        #
         count = 0
         for sample in test_data:
 	    value = list(self.single_forward(sample[0]))
